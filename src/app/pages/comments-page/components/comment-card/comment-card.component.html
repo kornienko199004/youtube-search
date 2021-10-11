@@ -1,0 +1,9 @@
+<mat-card class="example-card">
+  <mat-card-title-group>
+    <mat-card-title>{{ comment.authorDisplayName }}</mat-card-title>
+    <mat-card-subtitle>{{ comment.publishedAt | date:'short' }}</mat-card-subtitle>
+  </mat-card-title-group>
+  <mat-card-content>
+    {{ comment.textDisplay }}
+  </mat-card-content>
+</mat-card>

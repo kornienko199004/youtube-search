@@ -1,0 +1,15 @@
+<div class="wrapper">
+  <mat-form-field class="full-width">
+    <mat-label>search</mat-label>
+    <input #searchControl matInput [(ngModel)]="search" type="text" placeholder="search">
+  </mat-form-field>
+
+  <div class="pagination">
+    <app-pagination [paginationData]="ctrl.paginationData$ | async"></app-pagination>
+  </div>
+
+  <div *ngFor="let item of ctrl.videos$ | async; let last = last">
+    <app-search-card [videoData]="item"></app-search-card>
+    <br>
+  </div>
+</div>

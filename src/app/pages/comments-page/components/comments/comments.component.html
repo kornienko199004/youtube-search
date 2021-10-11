@@ -1,0 +1,7 @@
+<div class="wrapper">
+  <ng-container *ngFor="let comment of http.comments$ | async; let last = last">
+    <app-comment-card [comment]="comment">
+    </app-comment-card>
+    <br>
+  </ng-container>
+</div>
